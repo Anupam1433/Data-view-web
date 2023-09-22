@@ -2,7 +2,6 @@ from myapp.models import Company
 import os
 import csv
 from django.conf import settings
-# from myapp.models import Company
 
 
 def load_data():

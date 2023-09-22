@@ -1,3 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+from .models import Company
+
+
+def show_data(request):
+    data = Company.objects.all()
+    return render(request, 'myapp/data.html', {'data': data})

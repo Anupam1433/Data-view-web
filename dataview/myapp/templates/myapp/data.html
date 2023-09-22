@@ -1,0 +1,40 @@
+<!-- myapp/templates/myapp/data.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Data Page</title>
+  </head>
+  <body>
+    <h1>Data from CSV</h1>
+    <table>
+      <tr>
+        <th>company_name</th>
+        <th>category</th>
+        <th>sector</th>
+        <th>share_price</th>
+        <th>market_cap</th>
+        <th>source</th>
+        <th>lot_size</th>
+        <th>min_qty</th>
+        <th>isin</th>
+        <th>special_comment</th>
+        <th>sell_price_rupees</th>
+      </tr>
+      {% for record in data %}
+      <tr>
+        <td>{{ record.company_name }}</td>
+        <td>{{ record.category }}</td>
+        <td>{{ record.sector }}</td>
+        <td>{{ record.share_price }}</td>
+        <td>{{ record.market_cap }}</td>
+        <td>{{ record.source }}</td>
+        <td>{{ record.lot_size }}</td>
+        <td>{{ record.min_qty }}</td>
+        <td>{{ record.isin }}</td>
+        <td>{{ record.special_comment }}</td>
+        <td>{{ record.sell_price_rupees }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
