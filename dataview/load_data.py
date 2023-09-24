@@ -1,12 +1,15 @@
-from myapp.models import Company
 import os
 import csv
-from django.conf import settings
 
+from django import setup
+setup()
+
+from django.conf import settings
+from myapp.models import Company
 
 def load_data():
     csv_file_path = os.path.join(
-        settings.BASE_DIR, 'C:/Users/anupa/Desktop/Consolidation/Main_dataset.csv')
+        settings.BASE_DIR, 'Main_dataset.csv')
 
     with open(csv_file_path, 'r') as file:
         reader = csv.reader(file)
