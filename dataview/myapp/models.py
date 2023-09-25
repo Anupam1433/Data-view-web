@@ -5,7 +5,7 @@ class Company(models.Model):
     company_name = models.CharField(max_length=200)
     category = models.CharField(max_length=100)
     sector = models.CharField(max_length=100)
-    share_price = models.DecimalField(max_digits=10, decimal_places=2)
+    share_price = models.PositiveIntegerField()
     market_cap = models.DecimalField(max_digits=15, decimal_places=2)
     source = models.URLField(blank=True)  # Assumes URLs for the source
     lot_size = models.PositiveIntegerField()
